@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F96CBB752D425F519A24FD88"
+               BlueprintIdentifier = "BA0DF9C52011F49B9915AAA8"
                BuildableName = "libQLineNumberRuler.a"
                BlueprintName = "QLineNumberRuler"
                ReferencedContainer = "container:QLineNumberRuler.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F96CBB752D425F519A24FD88"
+            BlueprintIdentifier = "BA0DF9C52011F49B9915AAA8"
             BuildableName = "libQLineNumberRuler.a"
             BlueprintName = "QLineNumberRuler"
             ReferencedContainer = "container:QLineNumberRuler.xcodeproj">
@@ -71,7 +71,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F96CBB752D425F519A24FD88"
+            BlueprintIdentifier = "BA0DF9C52011F49B9915AAA8"
             BuildableName = "libQLineNumberRuler.a"
             BlueprintName = "QLineNumberRuler"
             ReferencedContainer = "container:QLineNumberRuler.xcodeproj">
@@ -97,7 +97,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F96CBB752D425F519A24FD88"
+            BlueprintIdentifier = "BA0DF9C52011F49B9915AAA8"
             BuildableName = "libQLineNumberRuler.a"
             BlueprintName = "QLineNumberRuler"
             ReferencedContainer = "container:QLineNumberRuler.xcodeproj">

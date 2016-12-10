@@ -10,9 +10,12 @@ TARGET = QLineNumberRuler
 TEMPLATE = lib
 CONFIG += staticlib
 
-SOURCES += qlinenumberruler.cpp
+SOURCES += qlinenumberruler.cpp \
+           qrulermarker.cpp
 
-HEADERS += qlinenumberruler.cpp
+
+HEADERS += qlinenumberruler.h \
+           qrulermarker.h
 unix {
     target.path = /usr/lib
     INSTALLS += target
