@@ -51,7 +51,6 @@ public:
     bool trackMouse(QMouseEvent *theEvent, bool adding);// -trackMouse:adding:
     
 private:
-    QRulerMarker(QLineNumberRuler *aRuler);
     QLineNumberRuler *_ruler;
     QImage *_image;
     QObject *_representedObject;
