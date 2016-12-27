@@ -11,11 +11,13 @@ TEMPLATE = lib
 CONFIG += staticlib
 
 SOURCES += qlinenumberruler.cpp \
-           qrulermarker.cpp
+           qrulermarker.cpp \
+           qcodeedit.cpp
 
 
 HEADERS += qlinenumberruler.h \
-           qrulermarker.h
+           qrulermarker.h \
+           qcodeedit.h
 unix {
     target.path = /usr/lib
     INSTALLS += target

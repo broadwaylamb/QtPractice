@@ -8,33 +8,38 @@
 
 #include "qlinenumberruler.h"
 #include "qrulermarker.h"
+#include "qcodeedit.h"
+#include <QPainter>
+#include <QPaintEvent>
 #include <QVector>
+#include <QTextBlock>
+#include <QTextCursor>
+#include <QTextDocument>
 
 #define RULER_THICKNESS 16
 
-// TODO: Implement accessory view
+// TODO: Implement accessory widget
 
-// MARK: Implemented
-QLineNumberRuler::QLineNumberRuler(QTextEdit *aTextEdit) : QWidget(aTextEdit) {
+QLineNumberRuler::QLineNumberRuler(QCodeEdit *aCodeEdit) : QWidget(aCodeEdit) {
     
-    setTextEdit(aTextEdit);
-    setRuleThickness(RULER_THICKNESS);
-    setReservedThicknessForMarkers(0.0);
-    setReservedThicknessForAccessoryWidget(0.0);
-    setMarkers(new QVector<QRulerMarker*>(0));
+    printf("QLineNumberRuler initialized\n");
+    _codeEdit = aCodeEdit;
+    _ruleThickness = RULER_THICKNESS;
+    _reservedThicknessForMarkers = 0.0;
+    _reservedThicknessForAccessoryWidget = 0.0;
+    _markers = new QVector<QRulerMarker*>(0);
 }
 
 void QLineNumberRuler::setAccessoryWidget(QWidget *aWidget) {
     // TODO: support for accessory widgets is not implemented
     _accessoryWidget = aWidget;
+    update();
 }
 
-// MARK: Implemented
 QWidget* QLineNumberRuler::accessoryWidget() const {
     return _accessoryWidget;
 }
 
-// MARK: Implemented
 void QLineNumberRuler::_verifyReservedThicknessForMarkers() {
     
     QRulerMarker *marker;
@@ -57,13 +62,11 @@ void QLineNumberRuler::_verifyReservedThicknessForMarkers() {
     }
 }
 
-// MARK: Implemented
 void QLineNumberRuler::setMarkers(QVector<QRulerMarker*>* newMarkers) {
     _markers = newMarkers;
     update();
 }
 
-// MARK: Implemented
 void QLineNumberRuler::addMarker(QRulerMarker *aMarker) {
 
     qreal markerThickness = aMarker->thicknessRequiredInRuler();
@@ -81,7 +84,6 @@ void QLineNumberRuler::addMarker(QRulerMarker *aMarker) {
     update();
 }
 
-// MARK: Implemented
 void QLineNumberRuler::removeMarker(QRulerMarker *aMarker) {
     if (_markers == nullptr) {
         return;
@@ -92,7 +94,6 @@ void QLineNumberRuler::removeMarker(QRulerMarker *aMarker) {
     update();
 }
 
-// MARK: Implemented
 bool QLineNumberRuler::trackMarker(QRulerMarker *aMarker, QMouseEvent *theEvent) {
     if (aMarker == nullptr) {
         return false;
@@ -101,39 +102,69 @@ bool QLineNumberRuler::trackMarker(QRulerMarker *aMarker, QMouseEvent *theEvent)
     return aMarker->trackMouse(theEvent, true);
 }
 
-// MARK: Implemented
-QTextEdit* QLineNumberRuler::textEdit() const {
-    return _textEdit;
+QCodeEdit* QLineNumberRuler::codeEdit() const {
+    return _codeEdit;
 }
 
-// MARK: Implemented
-void QLineNumberRuler::setTextEdit(QTextEdit *aTextEdit) {
-    _textEdit = aTextEdit;
+void QLineNumberRuler::setCodeEdit(QCodeEdit *aCodeEdit) {
+    _codeEdit = aCodeEdit;
 }
 
-// MARK: Implemented
 QVector<QRulerMarker*>* QLineNumberRuler::markers() const {
     return _markers;
 }
 
-void QLineNumberRuler::drawLineNumbersInRect(QRectF aRect) {
-    Q_UNUSED(aRect)
+inline static QTextCursor firstVisibleGlyphCursor(QTextEdit *textEdit) {
+    return textEdit->cursorForPosition(QPoint(0, 0));
 }
 
-// MARK: Implemented
+inline static void drawLineNumber(int lineNumber, int y, QPainter &painter) {
+    
+    auto lineNumberString = QString::number(lineNumber);
+    QPoint point(0, y);
+    painter.drawText(point, lineNumberString);
+}
+
+// MARK: Unimplemented
+void QLineNumberRuler::drawLineNumbersInRect(QRectF aRect) {
+    Q_UNUSED(aRect)
+    QPainter painter(this);
+    auto cursor = firstVisibleGlyphCursor(_codeEdit);
+    auto firstVisibleBlock = cursor.block();
+    
+    for (auto block = firstVisibleBlock; block.isValid() && block.isVisible(); block = block.next()) {
+        
+        int lineNumber = block.blockNumber() + 1;
+        int y = _codeEdit->cursorRect(QTextCursor(block)).bottom();
+        
+        drawLineNumber(lineNumber, y, painter);
+    }
+}
+
+void QLineNumberRuler::paintEvent(QPaintEvent *event) {
+    printf("QLineNumberRuler paint event\n");
+    QPainter painter(this);
+    // FIXME: Make the color settable
+    auto backgroundColor = QColor(Qt::GlobalColor::lightGray);
+    painter.fillRect(event->rect(), backgroundColor);
+    
+    drawLineNumbersInRect(event->rect());
+    drawMarkersInRect(event->rect());
+}
+
 void QLineNumberRuler::drawMarkersInRect(QRectF aRect) {
     for (auto iterator = _markers->begin(); iterator != _markers->end(); ++iterator) {
         (*iterator)->drawRect(aRect);
     }
 }
 
-// MARK: Implemented
 qreal QLineNumberRuler::ruleThickness() const {
     return _ruleThickness;
 }
 
 void QLineNumberRuler::setRuleThickness(qreal thickness) {
     _ruleThickness = thickness;
+    _codeEdit->tile();
 }
 
 qreal QLineNumberRuler::reservedThicknessForMarkers() const {
@@ -142,17 +173,18 @@ qreal QLineNumberRuler::reservedThicknessForMarkers() const {
 
 void QLineNumberRuler::setReservedThicknessForMarkers(qreal thickness) {
     _reservedThicknessForMarkers = thickness;
+    _codeEdit->tile();
 }
 
 qreal QLineNumberRuler::reservedThicknessForAccessoryWidget() const {
-    return  _reservedThicknessForMarkers;
+    return _reservedThicknessForMarkers;
 }
 
 void QLineNumberRuler::setReservedThicknessForAccessoryWidget(qreal thickness) {
     _reservedThicknessForAccessoryWidget = thickness;
+    _codeEdit->tile();
 }
 
-// MARK: Implemented
 qreal QLineNumberRuler::requiredThickness() const {
     return ruleThickness() + reservedThicknessForMarkers() + reservedThicknessForAccessoryWidget();
 }

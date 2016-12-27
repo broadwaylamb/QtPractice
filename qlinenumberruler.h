@@ -10,18 +10,18 @@
 #define QLINENUMBERRULER_H
 
 #include <QWidget>
-#include <QTextEdit>
 
 class QRulerMarker;
+class QCodeEdit;
 
 class QLineNumberRuler : public QWidget {
     Q_OBJECT
     
 public:
-    QLineNumberRuler(QTextEdit *aScrollArea);                       // -initWithScrollView:
+    QLineNumberRuler(QCodeEdit *aCodeEdit);                         // -initWithScrollView:
     
-    QTextEdit* textEdit() const;                                    // -scrollView:
-    void setTextEdit(QTextEdit *aTextEdit);                         // -setScrollView:
+    QCodeEdit* codeEdit() const;                                    // -scrollView:
+    void setCodeEdit(QCodeEdit *aCodeEdit);                         // -setScrollView:
     
     QWidget* accessoryWidget() const;                               // -accessoryView
     void setAccessoryWidget(QWidget *aWidget);                      // -setAccessoryWidget:
@@ -51,10 +51,10 @@ public:
     }
     
 protected:
-    
+    virtual void paintEvent(QPaintEvent *event) override;
     
 private:
-    QTextEdit *_textEdit;
+    QCodeEdit *_codeEdit;
     QVector<QRulerMarker*> *_markers;
     QWidget *_accessoryWidget;
     qreal _reservedThicknessForMarkers;

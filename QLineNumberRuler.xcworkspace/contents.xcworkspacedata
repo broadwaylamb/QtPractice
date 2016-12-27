@@ -2,9 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../../../Desktop/LineNumbers.playground">
+   </FileRef>
+   <FileRef
       location = "group:xcodeproj/QLineNumberRuler.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../GNUstep-gui/GNUstep-gui.xcodeproj">
+      location = "group:../../GNUstep-gui/GNUstep-gui.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../CodeEditor.xcodeproj">
    </FileRef>
 </Workspace>

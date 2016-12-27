@@ -10,7 +10,7 @@
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B5710B79-6F20-4FCD-8EB4-6B3F5088224A",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "FC09A1AE1DB3D2AEDED03A4898EBF0A104D81FC7" : "QLineNumberRuler\/",
-    "6DD5D09B84BEFFBBCB738EE4AA8F80BF25E4B6C9" : "GNUstep-gui\/"
+    "6DD5D09B84BEFFBBCB738EE4AA8F80BF25E4B6C9" : "..\/GNUstep-gui"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "QLineNumberRuler",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,

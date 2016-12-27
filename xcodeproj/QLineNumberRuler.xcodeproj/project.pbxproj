@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		7F56C979F94E637679CA4758 /* Qt Preprocess */ = {
+		215CC80CD6A3F66F972CFF13 /* Qt Preprocess */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59 /* Build configuration list for PBXNativeTarget "QLineNumberRuler" */;
 			buildPhases = (
@@ -22,31 +22,38 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		7458C7A930C4DA8B1100E446 /* qlinenumberruler.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 511147BE36D171327ACFDF81 /* qlinenumberruler.cpp */; settings = {ATTRIBUTES = (); }; };
-		877D2E551DFC9E620004BB01 /* qrulermarker.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 877D2E531DFC9E620004BB01 /* qrulermarker.cpp */; };
-		C523270E7441759705D6C5CA /* moc_qlinenumberruler.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 39F1B7ED31AE458785BC68AC /* moc_qlinenumberruler.cpp */; settings = {ATTRIBUTES = (); }; };
+		2E71B4952AE4A17CB25A9F7F /* qcodeedit.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7FE198847AA6A7A9D25E9507 /* qcodeedit.cpp */; settings = {ATTRIBUTES = (); }; };
+		501E593A536C31F8432159B4 /* qlinenumberruler.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7650D06E7BD8630628148064 /* qlinenumberruler.cpp */; settings = {ATTRIBUTES = (); }; };
+		6546BE14D6AD9EECB48B9B27 /* moc_qrulermarker.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 628AAC2C820DED7E9D190BCD /* moc_qrulermarker.cpp */; settings = {ATTRIBUTES = (); }; };
+		8C2A7EFBD2FEFE24FE8C8B28 /* qrulermarker.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 68AF2769B184D8827A8BF35A /* qrulermarker.cpp */; settings = {ATTRIBUTES = (); }; };
+		D284BA595B63CD7A339B32E2 /* moc_qlinenumberruler.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A9719DB68A93411A7CFDD0B5 /* moc_qlinenumberruler.cpp */; settings = {ATTRIBUTES = (); }; };
+		D457033DC3CB5B025BED74ED /* moc_qcodeedit.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 46BACAA28ED8E947B175550B /* moc_qcodeedit.cpp */; settings = {ATTRIBUTES = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		877D2E521DFC94800004BB01 /* PBXContainerItemProxy */ = {
+		87D03AF31E10323200DBC6F5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6DB9C3763D02B1415CD9D565 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7F56C979F94E637679CA4758;
+			remoteGlobalIDString = 215CC80CD6A3F66F972CFF13;
 			remoteInfo = "Qt Preprocess";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		000B83DDCFD39F12FD27C6D1 /* QLineNumberRuler.pro */ = {isa = PBXFileReference; lastKnownFileType = text; name = QLineNumberRuler.pro; path = /Users/sergej/Developer/QLineNumberRuler/QLineNumberRuler.pro; sourceTree = "<absolute>"; };
-		39F1B7ED31AE458785BC68AC /* moc_qlinenumberruler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_qlinenumberruler.cpp; path = /Users/sergej/Developer/QLineNumberRuler/xcodeproj/moc_qlinenumberruler.cpp; sourceTree = "<absolute>"; };
-		511147BE36D171327ACFDF81 /* qlinenumberruler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = qlinenumberruler.cpp; path = /Users/sergej/Developer/QLineNumberRuler/qlinenumberruler.cpp; sourceTree = "<absolute>"; };
-		76E909017DBAAA24A8925B45 /* libQLineNumberRuler.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libQLineNumberRuler.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		79E983F10972D118B95A8533 /* qlinenumberruler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; name = qlinenumberruler.h; path = /Users/sergej/Developer/QLineNumberRuler/qlinenumberruler.h; sourceTree = "<absolute>"; };
-		877D2E531DFC9E620004BB01 /* qrulermarker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qrulermarker.cpp; path = ../qrulermarker.cpp; sourceTree = "<group>"; };
-		877D2E541DFC9E620004BB01 /* qrulermarker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = qrulermarker.h; path = ../qrulermarker.h; sourceTree = "<group>"; };
-		D21AE2E41EB66B391B3C60BD /* QLineNumberRuler.pro */ = {isa = PBXFileReference; lastKnownFileType = text; name = QLineNumberRuler.pro; path = /Users/sergej/Developer/QLineNumberRuler/xcodeproj/QLineNumberRuler.pro; sourceTree = "<absolute>"; };
-		D3BBF4CBD5FAA6F7C9CD4393 /* .qmake.stash */ = {isa = PBXFileReference; lastKnownFileType = text; name = .qmake.stash; path = /Users/sergej/Developer/QLineNumberRuler/xcodeproj/.qmake.stash; sourceTree = "<absolute>"; };
+		0F460918DA2127B45889041B /* qlinenumberruler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = qlinenumberruler.h; path = /Users/sergej/Developer/CodeEditor/QLineNumberRuler/qlinenumberruler.h; sourceTree = "<absolute>"; };
+		2945F2B93F9DF0BDC87CE91A /* qcodeedit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = qcodeedit.h; path = /Users/sergej/Developer/CodeEditor/QLineNumberRuler/qcodeedit.h; sourceTree = "<absolute>"; };
+		40C90325B00D6F59EAF7C449 /* qrulermarker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = qrulermarker.h; path = /Users/sergej/Developer/CodeEditor/QLineNumberRuler/qrulermarker.h; sourceTree = "<absolute>"; };
+		46BACAA28ED8E947B175550B /* moc_qcodeedit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_qcodeedit.cpp; path = /Users/sergej/Developer/CodeEditor/QLineNumberRuler/xcodeproj/moc_qcodeedit.cpp; sourceTree = "<absolute>"; };
+		5159569EEAF9307803AC46D0 /* QLineNumberRuler.pro */ = {isa = PBXFileReference; lastKnownFileType = text; name = QLineNumberRuler.pro; path = /Users/sergej/Developer/CodeEditor/QLineNumberRuler/QLineNumberRuler.pro; sourceTree = "<absolute>"; };
+		628AAC2C820DED7E9D190BCD /* moc_qrulermarker.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_qrulermarker.cpp; path = /Users/sergej/Developer/CodeEditor/QLineNumberRuler/xcodeproj/moc_qrulermarker.cpp; sourceTree = "<absolute>"; };
+		68AF2769B184D8827A8BF35A /* qrulermarker.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = qrulermarker.cpp; path = /Users/sergej/Developer/CodeEditor/QLineNumberRuler/qrulermarker.cpp; sourceTree = "<absolute>"; };
+		7650D06E7BD8630628148064 /* qlinenumberruler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = qlinenumberruler.cpp; path = /Users/sergej/Developer/CodeEditor/QLineNumberRuler/qlinenumberruler.cpp; sourceTree = "<absolute>"; };
+		7FB629C328E12945E50196B2 /* .qmake.stash */ = {isa = PBXFileReference; lastKnownFileType = text; name = .qmake.stash; path = /Users/sergej/Developer/CodeEditor/QLineNumberRuler/xcodeproj/.qmake.stash; sourceTree = "<absolute>"; };
+		7FE198847AA6A7A9D25E9507 /* qcodeedit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = qcodeedit.cpp; path = /Users/sergej/Developer/CodeEditor/QLineNumberRuler/qcodeedit.cpp; sourceTree = "<absolute>"; };
+		A9719DB68A93411A7CFDD0B5 /* moc_qlinenumberruler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_qlinenumberruler.cpp; path = /Users/sergej/Developer/CodeEditor/QLineNumberRuler/xcodeproj/moc_qlinenumberruler.cpp; sourceTree = "<absolute>"; };
+		F4DC1FEB8A398D3260731BEE /* QLineNumberRuler.pro */ = {isa = PBXFileReference; lastKnownFileType = text; name = QLineNumberRuler.pro; path = /Users/sergej/Developer/CodeEditor/QLineNumberRuler/xcodeproj/QLineNumberRuler.pro; sourceTree = "<absolute>"; };
+		F5A7FE2561270BB648164FE9 /* libQLineNumberRuler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libQLineNumberRuler.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,10 +79,12 @@
 		2EB56BE3C2D93CDAB0C52E67 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				79E983F10972D118B95A8533 /* qlinenumberruler.h */,
-				511147BE36D171327ACFDF81 /* qlinenumberruler.cpp */,
-				877D2E541DFC9E620004BB01 /* qrulermarker.h */,
-				877D2E531DFC9E620004BB01 /* qrulermarker.cpp */,
+				7650D06E7BD8630628148064 /* qlinenumberruler.cpp */,
+				68AF2769B184D8827A8BF35A /* qrulermarker.cpp */,
+				7FE198847AA6A7A9D25E9507 /* qcodeedit.cpp */,
+				0F460918DA2127B45889041B /* qlinenumberruler.h */,
+				40C90325B00D6F59EAF7C449 /* qrulermarker.h */,
+				2945F2B93F9DF0BDC87CE91A /* qcodeedit.h */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -83,7 +92,9 @@
 		365189A7F0AA9D8A6762576A /* xcodeproj */ = {
 			isa = PBXGroup;
 			children = (
-				39F1B7ED31AE458785BC68AC /* moc_qlinenumberruler.cpp */,
+				A9719DB68A93411A7CFDD0B5 /* moc_qlinenumberruler.cpp */,
+				628AAC2C820DED7E9D190BCD /* moc_qrulermarker.cpp */,
+				46BACAA28ED8E947B175550B /* moc_qcodeedit.cpp */,
 			);
 			name = xcodeproj;
 			sourceTree = "<group>";
@@ -92,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				B6C4F9CC517FEFACA95753FB /* xcodeproj */,
-				000B83DDCFD39F12FD27C6D1 /* QLineNumberRuler.pro */,
+				5159569EEAF9307803AC46D0 /* QLineNumberRuler.pro */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -100,8 +111,8 @@
 		B6C4F9CC517FEFACA95753FB /* xcodeproj */ = {
 			isa = PBXGroup;
 			children = (
-				D21AE2E41EB66B391B3C60BD /* QLineNumberRuler.pro */,
-				D3BBF4CBD5FAA6F7C9CD4393 /* .qmake.stash */,
+				F4DC1FEB8A398D3260731BEE /* QLineNumberRuler.pro */,
+				7FB629C328E12945E50196B2 /* .qmake.stash */,
 			);
 			name = xcodeproj;
 			sourceTree = "<group>";
@@ -120,7 +131,7 @@
 		FE0A091FDBFB3E9C31B7A1BD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				76E909017DBAAA24A8925B45 /* libQLineNumberRuler.a */,
+				F5A7FE2561270BB648164FE9 /* libQLineNumberRuler.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,7 +139,7 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BA0DF9C52011F49B9915AAA8 /* QLineNumberRuler */ = {
+		BF9C6114C9543E44BC6EA59D /* QLineNumberRuler */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59 /* Build configuration list for PBXNativeTarget "QLineNumberRuler" */;
 			buildPhases = (
@@ -138,11 +149,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				627965132163EB967EC41AB7 /* PBXTargetDependency */,
+				EC59B23034F1FC19FD490910 /* PBXTargetDependency */,
 			);
 			name = QLineNumberRuler;
 			productName = QLineNumberRuler;
-			productReference = 76E909017DBAAA24A8925B45 /* libQLineNumberRuler.a */;
+			productReference = F5A7FE2561270BB648164FE9 /* libQLineNumberRuler.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -151,7 +162,6 @@
 		6DB9C3763D02B1415CD9D565 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
 			};
 			buildConfigurationList = DAC4C1AA5EDEA1C85E9CA5E6 /* Build configuration list for PBXProject "QLineNumberRuler" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -165,8 +175,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BA0DF9C52011F49B9915AAA8 /* QLineNumberRuler */,
-				7F56C979F94E637679CA4758 /* Qt Preprocess */,
+				BF9C6114C9543E44BC6EA59D /* QLineNumberRuler */,
+				215CC80CD6A3F66F972CFF13 /* Qt Preprocess */,
 			);
 		};
 /* End PBXProject section */
@@ -180,7 +190,7 @@
 			name = "Qt Qmake";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "make -C /Users/sergej/Developer/QLineNumberRuler/xcodeproj/ -f QLineNumberRuler.xcodeproj/qt_makeqmake.mak";
+			shellScript = "make -C /Users/sergej/Developer/CodeEditor/QLineNumberRuler/xcodeproj/ -f QLineNumberRuler.xcodeproj/qt_makeqmake.mak";
 			showEnvVarsInLog = 0;
 		};
 		7EF0942E79C014DCEC8976BC /* Qt Preprocessors */ = {
@@ -191,7 +201,7 @@
 			name = "Qt Preprocessors";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "make -C /Users/sergej/Developer/QLineNumberRuler/xcodeproj/ -f QLineNumberRuler.xcodeproj/qt_preprocess.mak";
+			shellScript = "make -C /Users/sergej/Developer/CodeEditor/QLineNumberRuler/xcodeproj/ -f QLineNumberRuler.xcodeproj/qt_preprocess.mak";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -201,9 +211,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7458C7A930C4DA8B1100E446 /* qlinenumberruler.cpp in Compile Sources */,
-				C523270E7441759705D6C5CA /* moc_qlinenumberruler.cpp in Compile Sources */,
-				877D2E551DFC9E620004BB01 /* qrulermarker.cpp in Compile Sources */,
+				501E593A536C31F8432159B4 /* qlinenumberruler.cpp in Compile Sources */,
+				8C2A7EFBD2FEFE24FE8C8B28 /* qrulermarker.cpp in Compile Sources */,
+				2E71B4952AE4A17CB25A9F7F /* qcodeedit.cpp in Compile Sources */,
+				D284BA595B63CD7A339B32E2 /* moc_qlinenumberruler.cpp in Compile Sources */,
+				6546BE14D6AD9EECB48B9B27 /* moc_qrulermarker.cpp in Compile Sources */,
+				D457033DC3CB5B025BED74ED /* moc_qcodeedit.cpp in Compile Sources */,
 			);
 			name = "Compile Sources";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,10 +224,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		627965132163EB967EC41AB7 /* PBXTargetDependency */ = {
+		EC59B23034F1FC19FD490910 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7F56C979F94E637679CA4758 /* Qt Preprocess */;
-			targetProxy = 877D2E521DFC94800004BB01 /* PBXContainerItemProxy */;
+			target = 215CC80CD6A3F66F972CFF13 /* Qt Preprocess */;
+			targetProxy = 87D03AF31E10323200DBC6F5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -222,46 +235,30 @@
 		339EE1B2CC4FC24589A0EA95 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = x86_64;
 				CC = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1.0;
 				DYLIB_CURRENT_VERSION = 1.0.0;
 				ENABLE_BITCODE = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = /Users/sergej/Qt/5.7/clang_64/lib;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					../../QLineNumberRuler,
 					.,
-					../../../Qt/5.7/clang_64/lib/QtWidgets.framework/Headers,
-					../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers,
-					../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers,
+					../../../../Qt/5.7/clang_64/lib/QtWidgets.framework/Headers,
+					../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers,
+					../../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers,
 					.,
 					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
 					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/AGL.framework/Headers,
-					"../../../Qt/5.7/clang_64/mkspecs/macx-clang",
+					"../../../../Qt/5.7/clang_64/mkspecs/macx-clang",
 				);
 				INSTALL_PATH = "";
 				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
 				LIBRARY_SEARCH_PATHS = "";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				OTHER_CFLAGS = (
 					"-pipe",
 					"-O2",
@@ -289,56 +286,38 @@
 				PRODUCT_NAME = QLineNumberRuler;
 				QT_LIBRARY_SUFFIX = "";
 				SDKROOT = macosx;
-				SYMROOT = /Users/sergej/Developer/QLineNumberRuler/xcodeproj/;
+				SYMROOT = /Users/sergej/Developer/CodeEditor/QLineNumberRuler/xcodeproj/;
 			};
 			name = Release;
 		};
 		3AA6C32AC930069E80220CF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = x86_64;
 				CC = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1.0;
 				DYLIB_CURRENT_VERSION = 1.0.0;
 				ENABLE_BITCODE = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = /Users/sergej/Qt/5.7/clang_64/lib;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					../../QLineNumberRuler,
 					.,
-					../../../Qt/5.7/clang_64/lib/QtWidgets.framework/Headers,
-					../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers,
-					../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers,
+					../../../../Qt/5.7/clang_64/lib/QtWidgets.framework/Headers,
+					../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers,
+					../../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers,
 					.,
 					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
 					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/AGL.framework/Headers,
-					"../../../Qt/5.7/clang_64/mkspecs/macx-clang",
+					"../../../../Qt/5.7/clang_64/mkspecs/macx-clang",
 				);
 				INSTALL_PATH = "";
 				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
 				LIBRARY_SEARCH_PATHS = "";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				ONLY_ACTIVE_ARCH = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				OTHER_CFLAGS = (
 					"-pipe",
 					"-O2",
@@ -366,7 +345,7 @@
 				PRODUCT_NAME = QLineNumberRuler;
 				QT_LIBRARY_SUFFIX = _debug;
 				SDKROOT = macosx;
-				SYMROOT = /Users/sergej/Developer/QLineNumberRuler/xcodeproj/;
+				SYMROOT = /Users/sergej/Developer/CodeEditor/QLineNumberRuler/xcodeproj/;
 			};
 			name = Debug;
 		};
@@ -391,6 +370,30 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-O0",
+					"-fPIC",
+					"-Wall",
+					"-W",
+					"-DQT_NO_DEBUG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-stdlib=libc++",
+					"-O0",
+					"-fPIC",
+					"-std=gnu++11",
+					"-Wall",
+					"-W",
+					"-DQT_NO_DEBUG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+				);
 				PRODUCT_NAME = QLineNumberRuler;
 				QT_LIBRARY_SUFFIX = _debug;
 				SDKROOT = macosx;

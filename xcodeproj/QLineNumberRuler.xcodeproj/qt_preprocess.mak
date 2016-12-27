@@ -15,7 +15,7 @@ LEXFLAGS  =
 YACC      = yacc
 YACCFLAGS = -d
 DEFINES       = -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
-INCPATH       = -I../../QLineNumberRuler -I. -I../../../Qt/5.7/clang_64/lib/QtWidgets.framework/Headers -I../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers -I../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/AGL.framework/Headers -I../../../Qt/5.7/clang_64/mkspecs/macx-clang -F/Users/sergej/Qt/5.7/clang_64/lib
+INCPATH       = -I../../QLineNumberRuler -I. -I../../../../Qt/5.7/clang_64/lib/QtWidgets.framework/Headers -I../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers -I../../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/AGL.framework/Headers -I../../../../Qt/5.7/clang_64/mkspecs/macx-clang -F/Users/sergej/Qt/5.7/clang_64/lib
 DEL_FILE  = rm -f
 MOVE      = mv -f
 
@@ -30,17 +30,37 @@ check: first
 
 benchmark: first
 
-compilers: moc_qlinenumberruler.cpp
+compilers: moc_qlinenumberruler.cpp moc_qrulermarker.cpp moc_qcodeedit.cpp
 compiler_rcc_make_all:
 compiler_rcc_clean:
-compiler_moc_header_make_all: moc_qlinenumberruler.cpp
+compiler_moc_header_make_all: moc_qlinenumberruler.cpp moc_qrulermarker.cpp moc_qcodeedit.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_qlinenumberruler.cpp
-moc_qlinenumberruler.cpp: ../../../Qt/5.7/clang_64/lib/QtWidgets.framework/Headers/QWidget \
-		../../../Qt/5.7/clang_64/lib/QtWidgets.framework/Headers/qwidget.h \
+	-$(DEL_FILE) moc_qlinenumberruler.cpp moc_qrulermarker.cpp moc_qcodeedit.cpp
+moc_qlinenumberruler.cpp: ../../../../Qt/5.7/clang_64/lib/QtWidgets.framework/Headers/QWidget \
+		../../../../Qt/5.7/clang_64/lib/QtWidgets.framework/Headers/qwidget.h \
 		../qlinenumberruler.h \
-		../../../Qt/5.7/clang_64/bin/moc
-	/Users/sergej/Qt/5.7/clang_64/bin/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -I/Users/sergej/Qt/5.7/clang_64/mkspecs/macx-clang -I/Users/sergej/Developer/QLineNumberRuler -I/Users/sergej/Qt/5.7/clang_64/lib/QtWidgets.framework/Headers -I/Users/sergej/Qt/5.7/clang_64/lib/QtGui.framework/Headers -I/Users/sergej/Qt/5.7/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/8.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include -I'/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks (framework directory)' -F/Users/sergej/Qt/5.7/clang_64/lib ../qlinenumberruler.h -o moc_qlinenumberruler.cpp
+		../../../../Qt/5.7/clang_64/bin/moc
+	/Users/sergej/Qt/5.7/clang_64/bin/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -I/Users/sergej/Qt/5.7/clang_64/mkspecs/macx-clang -I/Users/sergej/Developer/CodeEditor/QLineNumberRuler -I/Users/sergej/Qt/5.7/clang_64/lib/QtWidgets.framework/Headers -I/Users/sergej/Qt/5.7/clang_64/lib/QtGui.framework/Headers -I/Users/sergej/Qt/5.7/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/8.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include -I'/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks (framework directory)' -F/Users/sergej/Qt/5.7/clang_64/lib ../qlinenumberruler.h -o moc_qlinenumberruler.cpp
+
+moc_qrulermarker.cpp: ../../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers/QObject \
+		../../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers/qobject.h \
+		../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers/QImage \
+		../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers/qimage.h \
+		../qlinenumberruler.h \
+		../../../../Qt/5.7/clang_64/lib/QtWidgets.framework/Headers/QWidget \
+		../../../../Qt/5.7/clang_64/lib/QtWidgets.framework/Headers/qwidget.h \
+		../qrulermarker.h \
+		../../../../Qt/5.7/clang_64/bin/moc
+	/Users/sergej/Qt/5.7/clang_64/bin/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -I/Users/sergej/Qt/5.7/clang_64/mkspecs/macx-clang -I/Users/sergej/Developer/CodeEditor/QLineNumberRuler -I/Users/sergej/Qt/5.7/clang_64/lib/QtWidgets.framework/Headers -I/Users/sergej/Qt/5.7/clang_64/lib/QtGui.framework/Headers -I/Users/sergej/Qt/5.7/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/8.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include -I'/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks (framework directory)' -F/Users/sergej/Qt/5.7/clang_64/lib ../qrulermarker.h -o moc_qrulermarker.cpp
+
+moc_qcodeedit.cpp: ../../../../Qt/5.7/clang_64/lib/QtWidgets.framework/Headers/QTextEdit \
+		../../../../Qt/5.7/clang_64/lib/QtWidgets.framework/Headers/qtextedit.h \
+		../qlinenumberruler.h \
+		../../../../Qt/5.7/clang_64/lib/QtWidgets.framework/Headers/QWidget \
+		../../../../Qt/5.7/clang_64/lib/QtWidgets.framework/Headers/qwidget.h \
+		../qcodeedit.h \
+		../../../../Qt/5.7/clang_64/bin/moc
+	/Users/sergej/Qt/5.7/clang_64/bin/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -I/Users/sergej/Qt/5.7/clang_64/mkspecs/macx-clang -I/Users/sergej/Developer/CodeEditor/QLineNumberRuler -I/Users/sergej/Qt/5.7/clang_64/lib/QtWidgets.framework/Headers -I/Users/sergej/Qt/5.7/clang_64/lib/QtGui.framework/Headers -I/Users/sergej/Qt/5.7/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/8.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include -I'/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks (framework directory)' -F/Users/sergej/Qt/5.7/clang_64/lib ../qcodeedit.h -o moc_qcodeedit.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
