@@ -52,6 +52,7 @@ public:
     
 protected:
     virtual void paintEvent(QPaintEvent *event) override;
+    virtual void wheelEvent(QWheelEvent *event) override;
     
 private:
     QCodeEdit *_codeEdit;

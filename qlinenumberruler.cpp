@@ -16,7 +16,7 @@
 #include <QTextCursor>
 #include <QTextDocument>
 
-#define RULER_THICKNESS 16
+#define RULER_THICKNESS 32
 
 // TODO: Implement accessory widget
 
@@ -114,8 +114,14 @@ QVector<QRulerMarker*>* QLineNumberRuler::markers() const {
     return _markers;
 }
 
-inline static QTextCursor firstVisibleGlyphCursor(QTextEdit *textEdit) {
-    return textEdit->cursorForPosition(QPoint(0, 0));
+inline static QTextBlock firstVisibleBlock(QTextEdit *textEdit) {
+    auto cursor = textEdit->cursorForPosition(QPoint(0, 0));
+    return cursor.block();
+}
+
+inline static QTextBlock lastVisibleBlock(QTextEdit *textEdit) {
+    auto cursor = textEdit->cursorForPosition(textEdit->geometry().bottomLeft());
+    return cursor.block().next();
 }
 
 inline static void drawLineNumber(int lineNumber, int y, QPainter &painter) {
@@ -129,19 +135,24 @@ inline static void drawLineNumber(int lineNumber, int y, QPainter &painter) {
 void QLineNumberRuler::drawLineNumbersInRect(QRectF aRect) {
     Q_UNUSED(aRect)
     QPainter painter(this);
-    auto cursor = firstVisibleGlyphCursor(_codeEdit);
-    auto firstVisibleBlock = cursor.block();
+    auto firstVisibleBlock = ::firstVisibleBlock(_codeEdit);
+    auto lastVisibleBlock = ::lastVisibleBlock(_codeEdit);
     
-    for (auto block = firstVisibleBlock; block.isValid() && block.isVisible(); block = block.next()) {
+    QTextBlock block;
+    for (block = firstVisibleBlock; block.isValid() && block != lastVisibleBlock; block = block.next()) {
         
         int lineNumber = block.blockNumber() + 1;
         int y = _codeEdit->cursorRect(QTextCursor(block)).bottom();
         
         drawLineNumber(lineNumber, y, painter);
     }
+    
+    printf("Last vivible block: %d\n", block.previous().blockNumber());
 }
 
 void QLineNumberRuler::paintEvent(QPaintEvent *event) {
+    QWidget::paintEvent(event);
+    
     printf("QLineNumberRuler paint event\n");
     QPainter painter(this);
     // FIXME: Make the color settable
@@ -150,6 +161,15 @@ void QLineNumberRuler::paintEvent(QPaintEvent *event) {
     
     drawLineNumbersInRect(event->rect());
     drawMarkersInRect(event->rect());
+}
+
+void QLineNumberRuler::wheelEvent(QWheelEvent *event) {
+    QWidget::wheelEvent(event);
+    
+    if (!event->pixelDelta().isNull()) {
+        _codeEdit->viewport()->scroll(0, event->pixelDelta().y());
+        update();
+    }
 }
 
 void QLineNumberRuler::drawMarkersInRect(QRectF aRect) {
